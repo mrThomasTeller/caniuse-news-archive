@@ -38,7 +38,7 @@ fs.createReadStream('./stats.txt')
       }
     }
 
-    news.sort((a, b) => a.date.localeCompare(b.date));
+    news.sort((a, b) => b.date.localeCompare(a.date));
 
     const newsText = news.map(
       ({ date, feature, name }) =>
