@@ -1,0 +1,31 @@
+{
+  "name": "caniuse-history",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "grab": "cd src && ts-node-esm grab.ts",
+    "get-data": "cd src && ts-node-esm getAvailabilityDates.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/event-stream": "^4.0.0",
+    "@types/node": "^18.11.9",
+    "event-stream": "^4.0.1",
+    "jsonc-parser": "^3.2.0",
+    "simple-git": "^3.14.1",
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0"
+  }
+}
