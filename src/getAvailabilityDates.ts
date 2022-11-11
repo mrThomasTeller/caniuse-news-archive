@@ -42,11 +42,11 @@ fs.createReadStream('./stats.txt')
 
     const newsText = news.map(
       ({ date, feature, name }) =>
-        `${new Date(date).toLocaleDateString('ru-RU')}: ${
+        `- ${new Date(date).toLocaleDateString('ru-RU')}: ${
           feature.title
         } (https://caniuse.com/${name})`
     );
 
-    fs.writeFileSync('./history.md', `# News\n${newsText.join('\n')}`);
+    fs.writeFileSync('./history.md', `# News\n\n${newsText.join('\n')}`);
     // fs.writeFileSync('./availability-dates.json', JSON.stringify(map, undefined, 2));
   });
