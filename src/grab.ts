@@ -45,7 +45,7 @@ async function main(): Promise<void> {
           parent: featureData.parent,
           description: featureData.description,
           status: featureData.status,
-          availability: featureData.usage_perc_y,
+          availability: featureData.usage_perc_y + featureData.usage_perc_a,
         };
       }
 
