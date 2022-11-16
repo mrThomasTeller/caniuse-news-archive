@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>"Can I Use" News Archive</title>
+</head>
+
+<body>
+  <h1>"Can I Use" News Archive</h1>
+  <button type="button" id="login">GitHub login</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+  <script>
+    const supabaseUrl = 'https://qmikngjovkbtgqtzuwll.supabase.co'
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtaWtuZ2pvdmtidGdxdHp1d2xsIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njg1ODEwNzYsImV4cCI6MTk4NDE1NzA3Nn0.LnzvTdG6VgvHsb04tQTKjcqwMlCxGnA6qptsfILF5_U';
+    const client = supabase.createClient(supabaseUrl, supabaseKey);
+
+    document.getElementById('login').addEventListener('click', async () => {
+      const { user, session, error } = await client.auth.signIn({
+        // provider can be 'github', 'google', 'gitlab', and more
+        provider: 'github'
+      });
+      console.log({ user, session, error });
+    });
+  </script>
+</body>
+
+</html>
