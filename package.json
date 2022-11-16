@@ -5,6 +5,7 @@
   "main": "main.ts",
   "type": "module",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "grab": "cd src && ts-node-esm grab.ts",
     "get-data": "cd src && ts-node-esm getAvailabilityDates.ts"
@@ -16,6 +17,7 @@
     "@types/event-stream": "^4.0.0",
     "@types/node": "^18.11.9",
     "event-stream": "^4.0.1",
+    "express": "^4.18.2",
     "jsonc-parser": "^3.2.0",
     "simple-git": "^3.14.1",
     "typescript": "*"
